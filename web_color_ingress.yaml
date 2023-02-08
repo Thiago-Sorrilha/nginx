@@ -2,6 +2,7 @@ apiVersion: networking.k8s.io/v1beta1
 kind: Ingress
 metadata:
   name: web-color-ingress #nome do ingress
+  namespace: web-color
   annotations:
     kubernetes.io/ingress.class: "nginx"
 spec:
