@@ -1,18 +1,13 @@
-apiVersion: networking.k8s.io/v1beta1
+apiVersion: extensions.k8s.io/v1beta1
 kind: Ingress
 metadata:
-  annotations:
-    kubernetes.io/ingress.class: public
-  labels:
-    app.kubernetes.io/instance: nginx
-  name: web-color-ingress
-  namespace: web-color
+  name: web-color-ingress #nome do ingress
 spec:
   rules:
-    - host: 172.20.0.8
-      http:
-        paths:
-          - backend:
-              serviceName: web-color
-              servicePort: 30003
-            path: /
+  - host: 172.20.0.8 #endereço do host alvo
+    http:
+      paths:
+       - path: /web-color
+         backend:
+          serviceName: web-color
+          servicePort: 80 
