@@ -377,6 +377,8 @@ spec:
     app.kubernetes.io/component: controller
     app.kubernetes.io/instance: ingress-nginx
     app.kubernetes.io/name: ingress-nginx
+  externalIPs:
+    - 172.20.0.8
   type: NodePort
 ---
 apiVersion: v1
